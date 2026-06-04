@@ -149,7 +149,7 @@
     style.textContent = `
       .cta-download {
         width: 100%;
-        margin: 48px 0;
+        margin: 24px 0;
         font-family: "M PLUS 1", sans-serif;
       }
 
