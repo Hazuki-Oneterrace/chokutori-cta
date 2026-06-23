@@ -111,8 +111,9 @@
     <div class="cta-chokutori">
       <div class="cta-chokutori__card">
 
-        <h3 class="cta-chokutori__title">
-　　　　　特定技能と技人国、<br class="sp-br">どちらを採用できるか分からない方へ</h3>
+<h3 class="cta-chokutori__title">
+  特定技能と技人国、<br class="sp-br">どちらを採用できるか分からない方へ
+</h3>
 
 <p class="cta-chokutori__text">
   業務内容や採用したい人材像をお伺いし、
