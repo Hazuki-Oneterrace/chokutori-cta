@@ -135,7 +135,7 @@
              href="https://chokutori.com/?utm_source=article&utm_medium=cta&utm_campaign=service_article"
              target="_blank"
              rel="noopener noreferrer">
-            チョクトリのサービスを見る
+            サービス内容を知る
           </a>
 
         </div>
