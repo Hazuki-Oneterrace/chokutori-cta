@@ -13,7 +13,7 @@
     style.textContent = `
       .cta-chokutori{
         width:100%;
-        margin:48px 0;
+        margin:24px 0;
         font-family:"M PLUS 1", sans-serif;
       }
 
@@ -112,8 +112,7 @@
       <div class="cta-chokutori__card">
 
         <h3 class="cta-chokutori__title">
-　　　　　特定技能と技人国、<br class="sp-br">
-  　　　　どちらを採用できるか分からない方へ</h3>
+　　　　　特定技能と技人国、<br class="sp-br">どちらを採用できるか分からない方へ</h3>
 
 <p class="cta-chokutori__text">
   業務内容や採用したい人材像をお伺いし、
