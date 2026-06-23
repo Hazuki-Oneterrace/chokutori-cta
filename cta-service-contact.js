@@ -123,7 +123,7 @@
         <div class="cta-chokutori__buttons">
 
           <a class="cta-chokutori__btn"
-             id="click_service_article_chokutori"
+             id="click_contact_article_chokutori"
              href="https://chokutori.oneterrace.jp/contact?utm_source=article&utm_medium=cta&utm_campaign=contact_article"
              target="_blank"
              rel="noopener noreferrer">
@@ -131,7 +131,7 @@
           </a>
 
           <a class="cta-chokutori__btn cta-chokutori__btn--outline"
-             id="click_contact_article_chokutori"
+             id="click_service_article_chokutori"
              href="https://chokutori.com/?utm_source=article&utm_medium=cta&utm_campaign=service_article"
              target="_blank"
              rel="noopener noreferrer">
