@@ -150,6 +150,20 @@
   })();
 
   if (script) {
-    script.insertAdjacentHTML("afterend", html);
-  }
+  script.insertAdjacentHTML("afterend", html);
+}
+
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest("[id^='click_']");
+  if (!btn) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "article_cta_click",
+    click_link_id: btn.id,
+    click_text: btn.textContent.trim(),
+    click_page_path: location.pathname
+  });
+});
+
 })();
