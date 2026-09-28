@@ -153,17 +153,35 @@
   script.insertAdjacentHTML("afterend", html);
 }
 
-document.addEventListener("click", function (e) {
-  const btn = e.target.closest("[id^='click_']");
-  if (!btn) return;
+// Notify the article page; its GTM container owns analytics delivery.
+const ctaRoot = script && script.nextElementSibling;
+if (ctaRoot) {
+  ctaRoot.addEventListener("click", function (e) {
+    if (!(e.target instanceof Element)) return;
+    const btn = e.target.closest("a[id^='click_']");
+    if (!btn || !ctaRoot.contains(btn)) return;
 
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "article_cta_click",
-    click_link_id: btn.id,
-    click_text: btn.textContent.trim(),
-    click_page_path: location.pathname
+    const payload = {
+      event: "article_cta_click",
+      bridge: "chokutori-cta-v1",
+      click_link_id: btn.id,
+      click_text: btn.textContent.trim(),
+      cta_variant: "visa-comparison"
+    };
+
+    if (window.parent !== window) {
+      window.parent.postMessage(payload, "https://chokutori.oneterrace.jp");
+    } else {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: payload.event,
+        click_link_id: payload.click_link_id,
+        click_text: payload.click_text,
+        click_page_path: window.location.pathname,
+        cta_variant: payload.cta_variant
+      });
+    }
   });
-});
+}
 
 })();
